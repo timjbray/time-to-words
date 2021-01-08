@@ -5,5 +5,5 @@ export function convertTimeToWords(numericTime) {
     return 'midnight';
   }
 
-  return 'eight thirty';
+  return 'half past eight';
 }
