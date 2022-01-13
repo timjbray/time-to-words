@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Converts time from numbers into words",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "start": "node",
+    "test": "jest"
   },
   "author": "Tim Bray",
   "license": "ISC",
@@ -13,6 +13,6 @@
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "jest": "^26.6.3"
+    "jest": "^27.4.7"
   }
 }

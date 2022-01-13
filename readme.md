@@ -1,6 +1,6 @@
 # Pair Programming exercise 
 
-Write an function that converts numeric time into the corresponding english words - eg. '8:30' -> half past eight
+Write an function that converts time into the corresponding english words - eg. '8:30' -> half past eight
 
 ## Examples
 
