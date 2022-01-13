@@ -2,9 +2,9 @@
   "name": "time-in-words",
   "version": "1.0.0",
   "description": "Converts time from numbers into words",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "node",
+    "start": "node index.js",
     "test": "jest"
   },
   "author": "Tim Bray",

@@ -5,8 +5,6 @@ function convertTimeToWords(time) {
     return 'midnight';
   }
 
-  console.log('hello');
-
   return 'half past eight';
 }
 
