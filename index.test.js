@@ -15,4 +15,9 @@ describe('Time to words', () => {
     const timeInWords = convertTimeToWords('2:45');
     expect(timeInWords).toBe('quarter to three');
   });
+
+  it('Handles times after 30 mins - 2:45', () => {
+    const timeInWords = convertTimeToWords('4:37');
+    expect(timeInWords).toBe('twenty-three to five');
+  });
 });
