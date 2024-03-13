@@ -23,12 +23,10 @@ function convert(time) {
   let [hour, minute] = time.split(":");
   let minuteNumber = +minute;
   let timeInterval = timeIntervals(minute);
-  let conjunction = ''
   let newHour = +hour;
   if (minuteNumber > 0 && minuteNumber <= 30) {
     newHour = numberToWordMap[newHour];
-    timeInterval = timeIntervals(minute)
-    return `${numberToWordMap[minuteNumber]} past ${newHour}`
+    return `${timeInterval} past ${newHour}`
   } else if (minuteNumber > 30 && minuteNumber <= 60) {
     newHour = numberToWordMap[newHour + 1];
     return `${numberToWordMap[60 - minuteNumber]} to ${newHour}`
@@ -52,7 +50,7 @@ function timeIntervals(minute) {
       return 'five'
     }
     default: {
-      return numberToWordMap[minute]
+      return numberToWordMap[+minute]
     }
   }
 }
