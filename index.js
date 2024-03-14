@@ -22,15 +22,14 @@ const numberToWordMap = {
 function convert(time) {
   let [hour, minute] = time.split(":");
   let minuteWord = minuteToWord(minute);
-  let newHour = +hour;
   if (+minute > 0 && +minute <= 30) {
-    return `${minuteWord} past ${numberToWordMap[newHour]}`
+    return `${minuteWord} past ${numberToWordMap[+hour]}`
   } else if (+minute == 45) {
-    return `${minuteWord} to ${numberToWordMap[newHour + 1]}`
+    return `${minuteWord} to ${numberToWordMap[+hour + 1]}`
   } else if (+minute > 30 && +minute < 60) {
-    return `${numberToWordMap[60 - +minute]} to ${numberToWordMap[newHour + 1]}`
+    return `${numberToWordMap[60 - +minute]} to ${numberToWordMap[+hour + 1]}`
   } else {
-    return `${numberToWordMap[newHour]} o'clock`
+    return `${numberToWordMap[+hour]} o'clock`
   }
 }
 
