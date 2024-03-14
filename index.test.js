@@ -2,6 +2,11 @@ const  { convertTimeToWords } = require('./index');
 
 
 describe('Time to words', () => {
+  it('Handles undefined input', () => {
+    const timeInWords = convertTimeToWords(undefined);
+    expect(timeInWords).toBe(`Invalid input`);
+  });
+
   it('Handles midnight', () => {
     const timeInWords = convertTimeToWords('0:00');
     expect(timeInWords).toBe('midnight');

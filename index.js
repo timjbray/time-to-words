@@ -2,6 +2,9 @@
 const { numberToWordMap } = require('./numberToWordMap')
 // expecting time to be a string in the format like '8:15' or '12:30'
 function convertTimeToWords(time) {
+  if (!time) {
+    return 'Invalid input'
+  }
   // TODO: real code goes here!
   if (time === '0:00') {
     return 'midnight';
