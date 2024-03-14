@@ -21,24 +21,20 @@ const numberToWordMap = {
 
 function convert(time) {
   let [hour, minute] = time.split(":");
-  let minuteNumber = +minute;
-  let timeInterval = timeIntervals(minute);
+  let minuteWord = minuteToWord(minute);
   let newHour = +hour;
-  if (minuteNumber > 0 && minuteNumber <= 30) {
-    newHour = numberToWordMap[newHour];
-    return `${timeInterval} past ${newHour}`
-  } else if (minuteNumber == 45) {
-    newHour = numberToWordMap[newHour + 1];
-    return `${timeInterval} to ${newHour}`
-  } else if (minuteNumber > 30 && minuteNumber <= 60) {
-    newHour = numberToWordMap[newHour + 1];
-    return `${numberToWordMap[60 - minuteNumber]} to ${newHour}`
+  if (+minute > 0 && +minute <= 30) {
+    return `${minuteWord} past ${numberToWordMap[newHour]}`
+  } else if (+minute == 45) {
+    return `${minuteWord} to ${numberToWordMap[newHour + 1]}`
+  } else if (+minute > 30 && +minute < 60) {
+    return `${numberToWordMap[60 - +minute]} to ${numberToWordMap[newHour + 1]}`
   } else {
     return `${numberToWordMap[newHour]} o'clock`
   }
 }
 
-function timeIntervals(minute) {
+function minuteToWord(minute) {
   switch (minute) {
     case '15': {
       return 'quarter'
