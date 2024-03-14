@@ -1,4 +1,4 @@
-export const numberToWordMap = {
+ const numberToWordMap = {
   1: 'one', 
   2: 'two', 
   3: 'three', 
@@ -29,3 +29,5 @@ export const numberToWordMap = {
   28: 'twenty eight',
   29: 'twenty nine'
 }
+
+module.exports = { numberToWordMap }
